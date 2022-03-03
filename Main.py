@@ -16,9 +16,9 @@ Library = ["Pride and Prejudice", "Frankenstein", "Sherlock Holmes", "Alice in W
 Keyword = None
 BookSelected = None
 KeywordFoundString = None
-userInputString = None
-mainMenuString = None
-mainMenuString = "Type the keyword you wish to search:" + "\n"
+UserInputString = None
+MainMenuString = "Type the keyword you wish to search:" + "\n"
+NumberOfBooks = 10
 
 class BookandPosition():
     def __init__(self, BookName, Position):
@@ -27,27 +27,19 @@ class BookandPosition():
 
 # Function to retrieve three lines for three different books from keyword selected based on the user input.
 def SearchKeyword(Keyword): 
-    BookTitle1 = None
-    BookTitle2 = None
-    BookTitle3 = None
-    PassageLine = None
-    PassageLine2 = None
-    PassageLine3 = None
     PassagesFound = []
 
-    for x in range(3):
+    for x in range(NumberOfBooks):
     # Need a function check each word parsed by spaces. Possibility to add partial keywords found, wildcards.
-        print("Success")
-    
-    # Inside or out of loop depending how I build the array on book string at a time.
-    PassagesFound = [BookandPosition(BookTitle1,PassageLine), BookandPosition(BookTitle2,PassageLine2), BookandPosition(BookTitle3,PassageLine3)]
-    return PassagesFound
+        print("Ammend List")    
+    # Ill need a 2D list that ammends booktitle and the keyword's  index within the passed strings. Is every book going to be its own string? Maybe a List of book strings.
+    return print("Success")
 
 
 # Prompt user with main menu string, store input into string
-userInputString = input(mainMenuString)
+UserInputString = input(MainMenuString)
 
 # Print line label and call the SearchKeyword function. 
-print("Here's the first result from your keyword: " + "\n" + SearchKeyword(mainMenuString)) 
+print("Here's the first result from your keyword: " + "\n" + SearchKeyword(MainMenuString)) 
 
 #Need functions to pull statistics like count, similar words found(Maybe adding widlcards for first and last letter.), and word association web graph.
