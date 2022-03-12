@@ -8,7 +8,7 @@
 #
 # Michael Ashby
 # Start:    2/14/2022
-# Updated:  3/10/2022
+# Updated:  3/11/2022
 
 Library = ["Pride and Prejudice.txt", "Frankenstein.txt", "The Adventures of Sherlock Holmes.txt", "Alice’s Adventures in Wonderland.txt", "The Great Gatsby.txt", "The Yellow Wallpaper.txt", "A TALE OF TWO CITIES.txt", "Moby-Dick.txt", "Ulysses.txt", "DRACULA.txt"]
 
@@ -19,6 +19,12 @@ KeywordFoundString = None
 UserInputString = None
 MainMenuString = "Type the keyword you wish to search:" + "\n"
 NumberOfBooks = 10
+BookFileArray = None
+
+# Build book files into an array
+for x in range(NumberOfBooks):
+    print(x)
+    BookFileArray[x] = BookFileArray[open(Library[x])]
 
 # Class to hold information on the book. 
 class BookInfo ():
@@ -26,11 +32,12 @@ class BookInfo ():
     Title = None
     Text = None
     
-    def getAuthor(self):
+    def getAuthor(cls):
+
         return Author
-    def getTitle(self):
+    def getTitle(cls):
         return Title
-    def getText(self):
+    def getText(cls):
         return Text
 
 
