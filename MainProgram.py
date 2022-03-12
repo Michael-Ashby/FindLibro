@@ -33,7 +33,6 @@ class BookInfo ():
     Text = None
     
     def getAuthor(cls):
-
         return Author
     def getTitle(cls):
         return Title
